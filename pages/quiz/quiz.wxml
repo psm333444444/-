@@ -1,0 +1,38 @@
+<view class="quiz-wrap">
+  <view class="q-title">两航起义知识小问答</view>
+
+  <!--第1题-->
+  <view class="q-card">
+    <view class="question">第1题：两航起义发生在哪一天？</view>
+    <button bindtap="q1A">A.1949年11月9日</button>
+    <button bindtap="q1B">B.1950年11月9日</button>
+  </view>
+  <view class="result">{{tip1}}</view>
+
+  <!--第2题-->
+  <view class="q-card">
+    <view class="question">第2题：起义飞机是从哪座机场起飞？</view>
+    <button bindtap="q2A">A.广州白云机场</button>
+    <button bindtap="q2B">B.香港启德机场</button>
+  </view>
+  <view class="result">{{tip2}}</view>
+
+  <!--第3题-->
+  <view class="q-card">
+    <view class="question">第3题：“两航”指的是？</view>
+    <button bindtap="q3A">A.中国航空公司、中央航空公司</button>
+    <button bindtap="q3B">B.南方航空、东方航空</button>
+  </view>
+  <view class="result">{{tip3}}</view>
+
+  <!--第4题-->
+  <view class="q-card">
+    <view class="question">第4题：两航起义的历史意义是？</view>
+    <button bindtap="q4A">A.奠定新中国民航事业基础</button>
+    <button bindtap="q4B">B.开启我国航天事业</button>
+  </view>
+  <view class="result">{{tip4}}</view>
+
+
+  <button class="home-btn" bindtap="goIndex">返回首页</button>
+</view>

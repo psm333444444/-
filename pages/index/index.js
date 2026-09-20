@@ -1,0 +1,17 @@
+Page({
+  goHistory(){
+    wx.navigateTo({
+      url:"/pages/history/history"
+    })
+  },
+  goQuiz(){
+    wx.navigateTo({
+      url:"/pages/quiz/quiz"
+    })
+  },
+  goScenic(){
+    wx.navigateTo({
+      url:"/pages/scenic/scenic"
+    })
+  }
+})

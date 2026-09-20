@@ -1,0 +1,31 @@
+.quiz-wrap{
+  padding:30rpx;
+  background:#f8f8f8;
+  min-height:100vh;
+}
+.q-title{
+  text-align:center;
+  font-size:38rpx;
+  font-weight:bold;
+  color:#991b1b;
+  margin:30rpx 0;
+}
+.q-card{
+  background:#fff;
+  padding:40rpx 30rpx;
+  border-radius:16rpx;
+  margin-bottom:30rpx;
+}
+.question{
+  font-size:32rpx;
+  margin-bottom:40rpx;
+}
+.result{
+  text-align:center;
+  margin:40rpx 0;
+  font-size:30rpx;
+}
+.home-btn{
+  background-color:#b82626;
+  color:#fff;
+}

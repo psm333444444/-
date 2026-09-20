@@ -1,0 +1,7 @@
+<view>
+  <view>导航前往两航起义展馆</view>
+  <button bindtap="getPositionAndNav">获取我的位置并规划路线</button>
+  <view wx:if="{{tip}}">{{tip}}</view>
+  <view>目的地：两航起义展馆</view>
+  <button bindtap="goBack">返回首页</button>
+</view>

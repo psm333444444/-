@@ -1,0 +1,6 @@
+view{
+  padding:30rpx;
+}
+button{
+  margin:30rpx 0;
+}

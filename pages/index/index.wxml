@@ -1,0 +1,18 @@
+<view class="box">
+  <view class="home-page">
+  <!--主页图片，/images/你的图片文件名-->
+  <image src="/images/航起.jpg" class="航起-img"></image>
+
+  <view></view>
+  <!--你的其他按钮、文字写在这里-->
+</view>
+  <view class="btn-item">
+    <button bindtap="goHistory">查看两航起义历史</button>
+  </view>
+  <view class="btn-item">
+    <button bindtap="goQuiz">知识小问答</button>
+  </view>
+  <view class="btn-item">
+    <button bindtap="goScenic">导航到两航起义馆</button>
+  </view>
+</view>

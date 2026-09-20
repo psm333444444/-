@@ -1,0 +1,7 @@
+<view>
+  <view>导航前往两航起义展馆</view>
+  <button bindtap="goMap">打开地图查看展馆位置</button>
+  <view>目的地：两航起义展馆</view>
+  <view>地址：天津市东丽区张贵庄老机场</view>
+  <button bindtap="goBack">返回首页</button>
+</view>

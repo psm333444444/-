@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history/history",
+    "pages/quiz/quiz",
+    "pages/scenic/scenic"
+  ],
+  "window": {
+    "navigationBarTitleText": "两航起义导览",
+    "navigationBarBackgroundColor": "#b82626",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "requiredPrivateInfos": ["getLocation"]
+}
