@@ -1,6 +1,10 @@
 <view class="page">
   <view class="header">
-    <view class="title">🤖 AI 智能助手</view>
+    <view class="header-content">
+      <view class="title">🤖 AI 智能助手</view>
+      <view class="subtitle">两航起义纪念馆</view>
+    </view>
+    <view class="clear-btn" bindtap="clearChat">清空</view>
   </view>
   
   <view class="chat-area">
@@ -10,6 +14,17 @@
       scroll-into-view="{{scrollToView}}"
       scroll-with-animation
     >
+      <!-- 欢迎消息 -->
+      <view class="welcome-tip" wx:if="{{messages.length <= 1}}">
+        <view class="tip-title">💡 您可以这样问我：</view>
+        <view class="tip-list">
+          <view class="tip-item" wx:for="{{quickQuestions}}" wx:key="*this" bindtap="sendQuickQuestion" data-question="{{item}}">
+            {{item}}
+          </view>
+        </view>
+      </view>
+
+      <!-- 消息列表 -->
       <view 
         class="chat-message {{item.role}}" 
         wx:for="{{messages}}" 
@@ -17,13 +32,33 @@
         id="msg-{{index}}"
       >
         <view class="avatar" wx:if="{{item.role === 'bot'}}">🤖</view>
-        <view class="bubble">{{item.content}}</view>
+        <view class="msg-wrap">
+          <view class="bubble">
+            <text>{{item.content}}</text>
+            <!-- 操作按钮 -->
+            <view class="action-btn" wx:if="{{item.action}}" bindtap="handleAction" data-action="{{item.action}}">
+              {{item.action.label}} →
+            </view>
+          </view>
+          <view class="time">{{item.time}}</view>
+        </view>
         <view class="avatar" wx:if="{{item.role === 'user'}}">👤</view>
+      </view>
+
+      <!-- 打字动画 -->
+      <view class="chat-message bot" wx:if="{{isTyping}}">
+        <view class="avatar">🤖</view>
+        <view class="typing-bubble">
+          <view class="dot"></view>
+          <view class="dot"></view>
+          <view class="dot"></view>
+        </view>
       </view>
     </scroll-view>
   </view>
   
   <view class="input-area">
+    <view class="quick-btn" bindtap="sendQuickQuestion" data-question="你好">👋</view>
     <input 
       class="chat-input" 
       placeholder="请输入您的问题..." 
@@ -31,7 +66,10 @@
       value="{{inputValue}}"
       confirm-type="send"
       bindconfirm="sendMessage"
+      adjust-position="{{true}}"
     />
-    <view class="send-btn {{inputValue ? 'active' : ''}}" bindtap="sendMessage">发送</view>
+    <view class="send-btn {{inputValue ? 'active' : ''}}" bindtap="sendMessage">
+      发送
+    </view>
   </view>
 </view>

@@ -12,8 +12,8 @@
     
     <view class="info-card">
       <view class="card-title">🕐 开放时间</view>
-      <view class="card-text">周二至周日 9:00 - 16:30</view>
-      <view class="card-text">周一闭馆（法定节假日除外）</view>
+      <view class="card-text">周二至周五 9:00 - 11:30，13：30-16：30</view>
+      <view class="card-text">周一，周六至周日 全天关闭</view>
     </view>
     
     <view class="info-card">
