@@ -1,18 +1,28 @@
-<view class="box">
-  <view class="home-page">
-  <!--主页图片，/images/你的图片文件名-->
-  <image src="/images/航起.jpg" class="航起-img"></image>
-
-  <view></view>
-  <!--你的其他按钮、文字写在这里-->
-</view>
-  <view class="btn-item">
-    <button bindtap="goHistory">查看两航起义历史</button>
+<view class="page">
+  <view class="header">
+    <view class="title">两航起义纪念馆</view>
+    <view class="subtitle">爱国主义教育基地</view>
   </view>
-  <view class="btn-item">
-    <button bindtap="goQuiz">知识小问答</button>
-  </view>
-  <view class="btn-item">
-    <button bindtap="goScenic">导航到两航起义馆</button>
+  
+  <view class="content">
+    <view class="info-card">
+      <view class="card-title">📖 关于两航起义</view>
+      <view class="card-text">
+        1949年11月9日，中国航空公司和中央航空运输公司（简称"两航"）的2000多名员工在香港宣布起义，回归祖国怀抱。这一壮举对中国民航事业的发展具有深远影响。
+      </view>
+    </view>
+    
+    <view class="info-card">
+      <view class="card-title">🏛️ 纪念馆信息</view>
+      <view class="card-text">
+        地址：天津市东丽区张贵庄老机场
+      </view>
+      <view class="card-text">
+        开放时间：周二至周日 9:00-16:30
+      </view>
+      <view class="card-text">
+        门票：免费开放
+      </view>
+    </view>
   </view>
 </view>

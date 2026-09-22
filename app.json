@@ -1,14 +1,41 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/scenic/scenic",
+    "pages/ai/ai",
+    "pages/profile/profile",
     "pages/history/history",
-    "pages/quiz/quiz",
-    "pages/scenic/scenic"
+    "pages/quiz/quiz"
   ],
   "window": {
     "navigationBarTitleText": "两航起义导览",
     "navigationBarBackgroundColor": "#b82626",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#b82626",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/scenic/scenic",
+        "text": "导览"
+      },
+      {
+        "pagePath": "pages/ai/ai",
+        "text": "AI"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

@@ -1,7 +1,24 @@
-<view>
-  <view>导航前往两航起义展馆</view>
-  <button bindtap="goMap">打开地图查看展馆位置</button>
-  <view>目的地：两航起义展馆</view>
-  <view>地址：天津市东丽区张贵庄老机场</view>
-  <button bindtap="goBack">返回首页</button>
+<view class="page">
+  <view class="header">
+    <view class="title">🏛️ 导览服务</view>
+  </view>
+  
+  <view class="content">
+    <view class="info-card">
+      <view class="card-title">📍 纪念馆位置</view>
+      <view class="card-text">天津市东丽区张贵庄老机场</view>
+      <button class="map-btn" bindtap="goMap">打开地图导航</button>
+    </view>
+    
+    <view class="info-card">
+      <view class="card-title">🕐 开放时间</view>
+      <view class="card-text">周二至周日 9:00 - 16:30</view>
+      <view class="card-text">周一闭馆（法定节假日除外）</view>
+    </view>
+    
+    <view class="info-card">
+      <view class="card-title">📞 联系方式</view>
+      <view class="card-text">咨询电话：022-XXXXXXXX</view>
+    </view>
+  </view>
 </view>

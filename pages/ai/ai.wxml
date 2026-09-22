@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="header">
+    <view class="title">🤖 AI 智能助手</view>
+  </view>
+  
+  <view class="content">
+    <view class="chat-area">
+      <view class="chat-message bot">
+        <view class="avatar">🤖</view>
+        <view class="bubble">您好！我是两航起义纪念馆AI助手，有什么可以帮助您的吗？</view>
+      </view>
+    </view>
+    
+    <view class="input-area">
+      <input class="chat-input" placeholder="请输入您的问题..." bindinput="onInput" value="{{inputValue}}" />
+      <button class="send-btn" bindtap="sendMessage">发送</button>
+    </view>
+  </view>
+</view>
