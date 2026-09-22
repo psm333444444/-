@@ -1,7 +1,8 @@
 Page({
   data: {
     userInfo: null,
-    hasLogin: false
+    hasLogin: false,
+    feedbackCount: 0
   },
 
   onShow() {
@@ -13,6 +14,9 @@ Page({
     if (userInfo) {
       this.setData({ userInfo, hasLogin: true });
     }
+    // 获取反馈数量
+    const feedbackList = wx.getStorageSync('feedbackList') || [];
+    this.setData({ feedbackCount: feedbackList.length });
   },
 
   getUserProfile() {
@@ -42,17 +46,17 @@ Page({
   },
 
   goSettings() {
-    wx.showToast({ title: '功能开发中', icon: 'none' });
+    wx.navigateTo({ url: '/pages/settings/settings' });
   },
 
   goFeedback() {
-    wx.showToast({ title: '功能开发中', icon: 'none' });
+    wx.navigateTo({ url: '/pages/feedback/feedback' });
   },
 
   goAbout() {
     wx.showModal({
       title: '关于我们',
-      content: '两航起义纪念馆小程序，弘扬爱国主义精神，传承历史文化。',
+      content: '两航起义纪念馆小程序\n\n版本：v1.0.0\n\n本小程序旨在弘扬爱国主义精神，传承历史文化，让更多人了解两航起义这段光辉历史。',
       showCancel: false
     });
   },

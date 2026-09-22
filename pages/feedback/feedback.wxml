@@ -1,0 +1,84 @@
+<view class="page">
+  <view class="header">
+    <view class="header-content">
+      <view class="back-btn" bindtap="goBack">← 返回</view>
+      <view class="title">意见反馈</view>
+    </view>
+  </view>
+
+  <scroll-view class="content" scroll-y>
+    <!-- 反馈类型 -->
+    <view class="section">
+      <view class="section-title">反馈类型</view>
+      <view class="type-list">
+        <view 
+          class="type-item {{feedbackType === index ? 'active' : ''}}" 
+          wx:for="{{feedbackTypes}}" 
+          wx:key="index"
+          bindtap="selectType"
+          data-index="{{index}}"
+        >
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 反馈内容 -->
+    <view class="section">
+      <view class="section-title">反馈内容 <text class="required">*</text></view>
+      <view class="textarea-wrap">
+        <textarea 
+          class="feedback-textarea" 
+          placeholder="请详细描述您的问题或建议（至少10个字）" 
+          placeholder-class="placeholder"
+          bindinput="onContentInput"
+          value="{{content}}"
+          maxlength="500"
+        />
+        <view class="char-count">{{content.length}}/500</view>
+      </view>
+    </view>
+
+    <!-- 上传图片 -->
+    <view class="section">
+      <view class="section-title">上传截图（可选，最多3张）</view>
+      <view class="image-list">
+        <view class="image-item" wx:for="{{images}}" wx:key="*this">
+          <image src="{{item}}" mode="aspectFill" bindtap="previewImage" data-url="{{item}}" />
+          <view class="delete-btn" bindtap="deleteImage" data-index="{{index}}">×</view>
+        </view>
+        <view class="add-image" bindtap="chooseImage" wx:if="{{images.length < 3}}">
+          <text class="add-icon">+</text>
+          <text class="add-text">添加图片</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 联系方式 -->
+    <view class="section">
+      <view class="section-title">联系方式（可选）</view>
+      <input 
+        class="contact-input" 
+        placeholder="手机号或邮箱，方便我们联系您" 
+        placeholder-class="placeholder"
+        bindinput="onContactInput"
+        value="{{contact}}"
+      />
+    </view>
+
+    <!-- 提交按钮 -->
+    <view class="submit-area">
+      <view class="submit-btn {{canSubmit ? 'active' : ''}}" bindtap="submitFeedback">
+        提交反馈
+      </view>
+    </view>
+
+    <!-- 温馨提示 -->
+    <view class="tips">
+      <view class="tips-title">温馨提示</view>
+      <view class="tips-content">• 您的反馈将被严格保密</view>
+      <view class="tips-content">• 我们会在3个工作日内处理</view>
+      <view class="tips-content">• 如有紧急问题请直接电话联系</view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,121 @@
+<view class="page">
+  <view class="header">
+    <view class="header-content">
+      <view class="back-btn" bindtap="goBack">← 返回</view>
+      <view class="title">设置</view>
+    </view>
+  </view>
+
+  <scroll-view class="content" scroll-y>
+    <!-- 通用设置 -->
+    <view class="section">
+      <view class="section-title">通用设置</view>
+      
+      <view class="setting-item">
+        <view class="setting-info">
+          <text class="setting-icon">🔔</text>
+          <text class="setting-text">消息通知</text>
+        </view>
+        <switch 
+          class="setting-switch" 
+          checked="{{settings.notifications}}" 
+          bindchange="toggleNotifications"
+          color="#b82626"
+        />
+      </view>
+
+      <view class="setting-item">
+        <view class="setting-info">
+          <text class="setting-icon">▶️</text>
+          <text class="setting-text">自动播放视频</text>
+        </view>
+        <switch 
+          class="setting-switch" 
+          checked="{{settings.autoPlay}}" 
+          bindchange="toggleAutoPlay"
+          color="#b82626"
+        />
+      </view>
+
+      <view class="setting-item">
+        <view class="setting-info">
+          <text class="setting-icon">🌙</text>
+          <text class="setting-text">深色模式</text>
+        </view>
+        <switch 
+          class="setting-switch" 
+          checked="{{settings.darkMode}}" 
+          bindchange="toggleDarkMode"
+          color="#b82626"
+        />
+      </view>
+
+      <view class="setting-item">
+        <view class="setting-info">
+          <text class="setting-icon">🔤</text>
+          <text class="setting-text">字体大小</text>
+        </view>
+        <picker mode="selector" range="{{fontSizes}}" value="{{fontSizeIndex}}" bindchange="changeFontSize">
+          <view class="setting-value">
+            {{fontSizes[fontSizeIndex]}} ▾
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 存储管理 -->
+    <view class="section">
+      <view class="section-title">存储管理</view>
+      
+      <view class="setting-item">
+        <view class="setting-info">
+          <text class="setting-icon">💾</text>
+          <text class="setting-text">缓存大小</text>
+        </view>
+        <view class="setting-value">{{settings.cacheSize}}</view>
+      </view>
+
+      <view class="setting-item bindtap" bindtap="clearCache">
+        <view class="setting-info">
+          <text class="setting-icon">🗑️</text>
+          <text class="setting-text">清除缓存</text>
+        </view>
+        <view class="setting-arrow">›</view>
+      </view>
+    </view>
+
+    <!-- 关于 -->
+    <view class="section">
+      <view class="section-title">关于</view>
+      
+      <view class="setting-item bindtap" bindtap="checkUpdate">
+        <view class="setting-info">
+          <text class="setting-icon">📱</text>
+          <text class="setting-text">检查更新</text>
+        </view>
+        <view class="setting-arrow">›</view>
+      </view>
+
+      <view class="setting-item bindtap" bindtap="showUserAgreement">
+        <view class="setting-info">
+          <text class="setting-icon">📄</text>
+          <text class="setting-text">用户协议</text>
+        </view>
+        <view class="setting-arrow">›</view>
+      </view>
+
+      <view class="setting-item bindtap" bindtap="showPrivacyPolicy">
+        <view class="setting-info">
+          <text class="setting-icon">🔒</text>
+          <text class="setting-text">隐私政策</text>
+        </view>
+        <view class="setting-arrow">›</view>
+      </view>
+    </view>
+
+    <!-- 版本信息 -->
+    <view class="version-info">
+      <text>两航起义纪念馆 v1.0.0</text>
+    </view>
+  </scroll-view>
+</view>

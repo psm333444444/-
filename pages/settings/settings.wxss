@@ -1,0 +1,97 @@
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+
+.header {
+  background: linear-gradient(135deg, #b82626, #d44444);
+  padding: 24rpx 30rpx;
+  color: #fff;
+  flex-shrink: 0;
+  padding-top: calc(24rpx + env(safe-area-inset-top));
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.back-btn {
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  padding: 8rpx 0;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  padding: 20rpx;
+}
+
+.section {
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 24rpx;
+  color: #999;
+  padding: 20rpx 24rpx 12rpx;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item.bindtap:active {
+  background: #f9f9f9;
+}
+
+.setting-info {
+  display: flex;
+  align-items: center;
+}
+
+.setting-icon {
+  font-size: 36rpx;
+  margin-right: 16rpx;
+}
+
+.setting-text {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.setting-value {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.setting-arrow {
+  font-size: 32rpx;
+  color: #ccc;
+}
+
+/* 版本信息 */
+.version-info {
+  text-align: center;
+  padding: 40rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}

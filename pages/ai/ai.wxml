@@ -4,7 +4,7 @@
     <!-- 快捷操作栏 -->
     <view class="quick-bar">
       <view class="quick-action" bindtap="sendQuickQuestion" data-question="两航起义是什么？">
-        <text class="quick-icon">📜</text>
+        <text class="quick-icon">✉️</text>
         <text class="quick-text">起义历史</text>
       </view>
       <view class="quick-action" bindtap="sendQuickQuestion" data-question="纪念馆在哪？">
@@ -12,11 +12,11 @@
         <text class="quick-text">位置</text>
       </view>
       <view class="quick-action" bindtap="sendQuickQuestion" data-question="开放时间？">
-        <text class="quick-icon">🕐</text>
+        <text class="quick-icon">🕰️</text>
         <text class="quick-text">时间</text>
       </view>
       <view class="quick-action" bindtap="sendQuickQuestion" data-question="怎么去？">
-        <text class="quick-icon">🚗</text>
+        <text class="quick-icon">🚘</text>
         <text class="quick-text">交通</text>
       </view>
     </view>
