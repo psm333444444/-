@@ -84,7 +84,7 @@
       <view class="input-wrapper">
         <textarea 
           class="chat-textarea" 
-          placeholder="请输入您的问题，如：两航起义的历史意义是什么？" 
+          placeholder="请输入您的问题..." 
           placeholder-class="placeholder"
           bindinput="onInput" 
           bindfocus="onFocus"
@@ -94,6 +94,7 @@
           maxlength="500"
           show-confirm-button="{{false}}"
           disable-default-padding
+          adjust-position="{{true}}"
         />
         <view class="char-count" wx:if="{{inputValue.length > 0}}">
           {{inputValue.length}}/500
