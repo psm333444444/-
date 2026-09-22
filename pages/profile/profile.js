@@ -41,14 +41,6 @@ Page({
     wx.navigateTo({ url: '/pages/quiz/quiz' });
   },
 
-  goFavorite() {
-    wx.showToast({ title: '功能开发中', icon: 'none' });
-  },
-
-  goSettings() {
-    wx.navigateTo({ url: '/pages/settings/settings' });
-  },
-
   goFeedback() {
     wx.navigateTo({ url: '/pages/feedback/feedback' });
   },
