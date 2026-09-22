@@ -8,9 +8,11 @@
     "pages/quiz/quiz"
   ],
   "window": {
-    "navigationBarTitleText": "两航起义导览",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#b82626",
-    "navigationBarTextStyle": "white"
+    "navigationBarTitleText": "两航起义纪念馆",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5f5"
   },
   "tabBar": {
     "custom": true,

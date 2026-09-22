@@ -1,6 +1,7 @@
 .page {
   min-height: 100vh;
   background: #f5f5f5;
+  padding-bottom: calc(120rpx + env(safe-area-inset-bottom));
 }
 
 .header {
@@ -15,12 +16,20 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 20rpx;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .avatar {
   width: 100%;
   height: 100%;
+}
+
+.default-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60rpx;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .nickname {
@@ -31,13 +40,12 @@
 }
 
 .login-btn {
-  background: rgba(255,255,255,0.9);
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.9);
   color: #b82626;
   font-size: 26rpx;
   border-radius: 30rpx;
-  padding: 0 40rpx;
-  height: 64rpx;
-  line-height: 64rpx;
+  padding: 12rpx 40rpx;
 }
 
 .content {
@@ -62,6 +70,10 @@
   border-bottom: none;
 }
 
+.menu-item:active {
+  background: #f9f9f9;
+}
+
 .menu-icon {
   font-size: 36rpx;
   margin-right: 20rpx;
@@ -76,4 +88,18 @@
 .menu-arrow {
   font-size: 36rpx;
   color: #ccc;
+}
+
+.logout-btn {
+  margin-top: 40rpx;
+  background: #fff;
+  color: #e74c3c;
+  text-align: center;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  font-size: 30rpx;
+}
+
+.logout-btn:active {
+  background: #f9f9f9;
 }

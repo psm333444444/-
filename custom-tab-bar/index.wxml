@@ -1,18 +1,13 @@
 <view class="tab-bar">
-  <view class="tab-bar-item {{active === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0" data-url="/pages/index/index">
-    <view class="tab-icon">🏠</view>
-    <view class="tab-text">首页</view>
-  </view>
-  <view class="tab-bar-item {{active === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1" data-url="/pages/scenic/scenic">
-    <view class="tab-icon">🗺️</view>
-    <view class="tab-text">导览</view>
-  </view>
-  <view class="tab-bar-item {{active === 2 ? 'active' : ''}}" bindtap="switchTab" data-index="2" data-url="/pages/ai/ai">
-    <view class="tab-icon">🤖</view>
-    <view class="tab-text">AI</view>
-  </view>
-  <view class="tab-bar-item {{active === 3 ? 'active' : ''}}" bindtap="switchTab" data-index="3" data-url="/pages/profile/profile">
-    <view class="tab-icon">👤</view>
-    <view class="tab-text">我的</view>
+  <view 
+    class="tab-bar-item {{active === index ? 'active' : ''}}" 
+    wx:for="{{list}}" 
+    wx:key="pagePath"
+    bindtap="switchTab" 
+    data-index="{{index}}" 
+    data-url="{{item.pagePath}}"
+  >
+    <view class="tab-icon">{{item.icon}}</view>
+    <view class="tab-text">{{item.text}}</view>
   </view>
 </view>
