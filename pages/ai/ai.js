@@ -4,6 +4,7 @@ Page({
     inputValue: '',
     scrollToView: '',
     isTyping: false,
+    isFocused: false,
     quickQuestions: [
       '两航起义是什么？',
       '纪念馆在哪？',
@@ -50,6 +51,14 @@ Page({
 
   onInput(e) {
     this.setData({ inputValue: e.detail.value });
+  },
+
+  onFocus() {
+    this.setData({ isFocused: true });
+  },
+
+  onBlur() {
+    this.setData({ isFocused: false });
   },
 
   sendQuickQuestion(e) {

@@ -191,42 +191,109 @@
 
 /* 输入区域 */
 .input-area {
-  display: flex;
-  align-items: center;
-  padding: 16rpx 20rpx;
   background: #fff;
   border-top: 1rpx solid #e5e5e5;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.input-area.focused {
+  border-top-color: #b82626;
+}
+
+/* 快捷操作栏 */
+.quick-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 16rpx 20rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.quick-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rpx 16rpx;
+}
+
+.quick-icon {
+  font-size: 36rpx;
+  margin-bottom: 4rpx;
+}
+
+.quick-text {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.quick-action:active {
+  opacity: 0.7;
+}
+
+/* 文本输入框 */
+.input-box {
+  display: flex;
+  align-items: flex-end;
+  padding: 16rpx 20rpx;
   padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
 }
 
-.quick-btn {
-  font-size: 36rpx;
-  padding: 10rpx;
-  margin-right: 12rpx;
+.input-wrapper {
+  flex: 1;
+  background: #f5f5f5;
+  border-radius: 16rpx;
+  padding: 16rpx 20rpx;
+  position: relative;
+  min-height: 80rpx;
+  max-height: 200rpx;
 }
 
-.chat-input {
-  flex: 1;
-  height: 72rpx;
-  background: #f5f5f5;
-  border-radius: 36rpx;
-  padding: 0 24rpx;
+.chat-textarea {
+  width: 100%;
+  min-height: 44rpx;
+  max-height: 156rpx;
   font-size: 28rpx;
+  line-height: 1.5;
+  color: #333;
+}
+
+.placeholder {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.char-count {
+  position: absolute;
+  right: 16rpx;
+  bottom: 8rpx;
+  font-size: 20rpx;
+  color: #ccc;
+}
+
+/* 发送按钮 */
+.send-area {
+  margin-left: 16rpx;
 }
 
 .send-btn {
-  margin-left: 16rpx;
-  background: #ddd;
-  color: #fff;
-  border-radius: 36rpx;
-  font-size: 28rpx;
-  padding: 0 28rpx;
+  width: 72rpx;
   height: 72rpx;
-  line-height: 72rpx;
-  flex-shrink: 0;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
 .send-btn.active {
   background: #b82626;
+  transform: scale(1.05);
+}
+
+.send-icon {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 1;
 }
