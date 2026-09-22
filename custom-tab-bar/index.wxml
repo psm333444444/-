@@ -7,7 +7,9 @@
     data-index="{{index}}" 
     data-url="{{item.pagePath}}"
   >
-    <view class="tab-icon">{{item.icon}}</view>
+    <view class="tab-icon-wrap">
+      <view class="tab-icon {{active === index ? 'icon-active' : ''}}">{{item.iconText}}</view>
+    </view>
     <view class="tab-text">{{item.text}}</view>
   </view>
 </view>

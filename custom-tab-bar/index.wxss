@@ -4,11 +4,11 @@
   left: 0;
   right: 0;
   height: 100rpx;
-  background: #ffffff;
+  background: #1a1a1a;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.2);
   z-index: 999;
   padding-bottom: env(safe-area-inset-bottom);
 }
@@ -22,17 +22,49 @@
   padding: 10rpx 0;
 }
 
-.tab-icon {
-  font-size: 40rpx;
+.tab-icon-wrap {
+  width: 52rpx;
+  height: 52rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 4rpx;
 }
 
+.tab-icon {
+  font-size: 36rpx;
+  color: #ffffff;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.tab-icon.icon-active {
+  opacity: 1;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
 .tab-text {
-  font-size: 22rpx;
-  color: #999999;
+  font-size: 20rpx;
+  color: #ffffff;
+  opacity: 0.6;
 }
 
 .tab-bar-item.active .tab-text {
-  color: #b82626;
+  opacity: 1;
   font-weight: bold;
+  color: #ffffff;
+}
+
+/* 选中时的底部指示器 */
+.tab-bar-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 8rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32rpx;
+  height: 4rpx;
+  background: #b82626;
+  border-radius: 2rpx;
 }
