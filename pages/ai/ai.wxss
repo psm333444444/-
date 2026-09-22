@@ -234,26 +234,26 @@
 .input-box {
   display: flex;
   align-items: flex-end;
-  padding: 12rpx 20rpx;
-  padding-bottom: calc(12rpx + env(safe-area-inset-bottom));
+  padding: 16rpx 20rpx;
+  padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
 }
 
 .input-wrapper {
   flex: 1;
   background: #f5f5f5;
   border-radius: 16rpx;
-  padding: 12rpx 16rpx;
+  padding: 16rpx 16rpx;
   position: relative;
-  min-height: 72rpx;
-  max-height: 180rpx;
+  min-height: 80rpx;
+  max-height: 200rpx;
 }
 
 .chat-textarea {
   width: 100%;
-  min-height: 40rpx;
-  max-height: 140rpx;
+  min-height: 48rpx;
+  max-height: 152rpx;
   font-size: 28rpx;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #333;
 }
 
